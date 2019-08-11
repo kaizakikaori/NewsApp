@@ -14,6 +14,7 @@
 		E9A7BC4D22FF91AC006E2448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A7BC4C22FF91AC006E2448 /* Assets.xcassets */; };
 		E9A7BC5022FF91AC006E2448 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A7BC4E22FF91AC006E2448 /* LaunchScreen.storyboard */; };
 		E9A7BC5822FFA9B6006E2448 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A7BC5722FFA9B6006E2448 /* NewsViewController.swift */; };
+		E9A7BC5A22FFBD5D006E2448 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A7BC5922FFBD5D006E2448 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E9A7BC4F22FF91AC006E2448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9A7BC5122FF91AC006E2448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9A7BC5722FFA9B6006E2448 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		E9A7BC5922FFBD5D006E2448 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A7BC5A22FFBD5D006E2448 /* WebKit.framework in Frameworks */,
 				7E9E100F4537B0C44EC2541B /* Pods_NewsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +48,7 @@
 		5CF2E72CEDCAD1BC5D70D96D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9A7BC5922FFBD5D006E2448 /* WebKit.framework */,
 				7E7E363F31A86E6CCCBE3595 /* Pods_NewsApp.framework */,
 			);
 			name = Frameworks;

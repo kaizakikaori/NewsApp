@@ -17,12 +17,122 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijz-yu-egR">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4DT-4E-sfF" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mgN-VU-ibc"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2yE-by-WC8">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="V28-WX-kVd">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ijz-yu-egR" firstAttribute="top" secondItem="4DT-4E-sfF" secondAttribute="bottom" id="6mA-bH-9NG"/>
+                            <constraint firstItem="4DT-4E-sfF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kwr-NT-MwX"/>
+                            <constraint firstItem="4DT-4E-sfF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LHP-SR-g5g"/>
+                            <constraint firstItem="ijz-yu-egR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X6M-jH-bKz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ijz-yu-egR" secondAttribute="trailing" id="dCj-xY-nPE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ijz-yu-egR" secondAttribute="bottom" id="moS-BZ-LF8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4DT-4E-sfF" secondAttribute="trailing" id="pLL-AM-fCz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonBarView" destination="4DT-4E-sfF" id="8mp-69-dzf"/>
+                        <outlet property="containerView" destination="ijz-yu-egR" id="XFW-df-uB0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="8o2-de-WhE">
+            <objects>
+                <viewController storyboardIdentifier="News" id="Rjz-Hs-AkU" customClass="NewsViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qpu-V4-8Jz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcA-oJ-xkJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPG-GS-1ba">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4sM-4h-wuq"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="tb9-6W-oKf">
+                                        <connections>
+                                            <action selector="Cancel:" destination="Rjz-Hs-AkU" id="mWn-tI-eow"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wRq-Fw-UHm"/>
+                                    <barButtonItem title="←" id="TnB-Mf-TWZ">
+                                        <connections>
+                                            <action selector="backpage:" destination="Rjz-Hs-AkU" id="bTd-yQ-eyR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Mht-hO-GEa"/>
+                                    <barButtonItem title="→" id="Doe-pc-K4V">
+                                        <connections>
+                                            <action selector="nextpage:" destination="Rjz-Hs-AkU" id="sM8-bp-Hr7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="s0L-Vs-Dt3"/>
+                                    <barButtonItem systemItem="refresh" id="DBu-1q-Ocl">
+                                        <connections>
+                                            <action selector="refreshpage:" destination="Rjz-Hs-AkU" id="I2a-Qm-zlT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5PY-ez-EUx" firstAttribute="trailing" secondItem="zcA-oJ-xkJ" secondAttribute="trailing" id="2q4-vB-6PQ"/>
+                            <constraint firstItem="zcA-oJ-xkJ" firstAttribute="leading" secondItem="5PY-ez-EUx" secondAttribute="leading" id="G5z-v5-0oX"/>
+                            <constraint firstItem="IPG-GS-1ba" firstAttribute="leading" secondItem="Qpu-V4-8Jz" secondAttribute="leading" id="SOV-Yp-66q"/>
+                            <constraint firstItem="zcA-oJ-xkJ" firstAttribute="top" secondItem="5PY-ez-EUx" secondAttribute="top" id="ZIo-Bu-5tr"/>
+                            <constraint firstItem="5PY-ez-EUx" firstAttribute="trailing" secondItem="IPG-GS-1ba" secondAttribute="trailing" id="g9v-Fo-Is3"/>
+                            <constraint firstItem="5PY-ez-EUx" firstAttribute="bottom" secondItem="IPG-GS-1ba" secondAttribute="bottom" id="kPg-wK-96M"/>
+                            <constraint firstItem="IPG-GS-1ba" firstAttribute="top" secondItem="zcA-oJ-xkJ" secondAttribute="bottom" id="veA-0G-CwV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5PY-ez-EUx"/>
+                    </view>
+                    <connections>
+                        <outlet property="toolBar" destination="IPG-GS-1ba" id="ElS-Q0-4dq"/>
+                        <outlet property="webView" destination="zcA-oJ-xkJ" id="cXk-k5-Cen"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c30-0Z-KDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448" y="21"/>
         </scene>
     </scenes>
 </document>
