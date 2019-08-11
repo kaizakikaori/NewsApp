@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		7E9E100F4537B0C44EC2541B /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7E363F31A86E6CCCBE3595 /* Pods_NewsApp.framework */; };
 		E9A7BC4622FF91A9006E2448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A7BC4522FF91A9006E2448 /* AppDelegate.swift */; };
-		E9A7BC4822FF91A9006E2448 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A7BC4722FF91A9006E2448 /* ViewController.swift */; };
+		E9A7BC4822FF91A9006E2448 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A7BC4722FF91A9006E2448 /* MainViewController.swift */; };
 		E9A7BC4B22FF91A9006E2448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A7BC4922FF91A9006E2448 /* Main.storyboard */; };
 		E9A7BC4D22FF91AC006E2448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A7BC4C22FF91AC006E2448 /* Assets.xcassets */; };
 		E9A7BC5022FF91AC006E2448 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A7BC4E22FF91AC006E2448 /* LaunchScreen.storyboard */; };
+		E9A7BC5822FFA9B6006E2448 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A7BC5722FFA9B6006E2448 /* NewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +22,12 @@
 		C3BDE845DDAE664AFD228942 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
 		E9A7BC4222FF91A9006E2448 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A7BC4522FF91A9006E2448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9A7BC4722FF91A9006E2448 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9A7BC4722FF91A9006E2448 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E9A7BC4A22FF91A9006E2448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9A7BC4C22FF91AC006E2448 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9A7BC4F22FF91AC006E2448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9A7BC5122FF91AC006E2448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9A7BC5722FFA9B6006E2448 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				E9A7BC4522FF91A9006E2448 /* AppDelegate.swift */,
-				E9A7BC4722FF91A9006E2448 /* ViewController.swift */,
+				E9A7BC4722FF91A9006E2448 /* MainViewController.swift */,
+				E9A7BC5722FFA9B6006E2448 /* NewsViewController.swift */,
 				E9A7BC4922FF91A9006E2448 /* Main.storyboard */,
 				E9A7BC4C22FF91AC006E2448 /* Assets.xcassets */,
 				E9A7BC4E22FF91AC006E2448 /* LaunchScreen.storyboard */,
@@ -203,7 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9A7BC4822FF91A9006E2448 /* ViewController.swift in Sources */,
+				E9A7BC5822FFA9B6006E2448 /* NewsViewController.swift in Sources */,
+				E9A7BC4822FF91A9006E2448 /* MainViewController.swift in Sources */,
 				E9A7BC4622FF91A9006E2448 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
